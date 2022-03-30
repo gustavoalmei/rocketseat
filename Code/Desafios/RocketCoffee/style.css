@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+  }
+
+body{
+    height: 100vh;
+    background: url("./assets/blur-1.png") no-repeat -400px, url("./assets/blur-2.png") no-repeat 400px -700px var(--backgrond);
+    background-size: cover;
+}
+
+header{
+    width: 918px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+ul li{
+    list-style-type: none;
+    position: relative;
+    left: 30px;
+}
+
+li:hover::before{
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 1px;
+    width: 5px;
+    height: 20px;
+    background-color: lawngreen;
+    border-radius: 2px 0 0 2px;
+}
+
+.getCoffee{
+    border: 1px solid var(--button);
+    height: 37px;
+    width: 172px;
+    border-radius: 6px;
+    padding: 11px 38px;
+    line-height: 10px;
+    opacity: 1;
+}
+
+.getCoffee > a{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.getCoffee:hover{
+    background-color: var(--button);
+    transition: background .3s;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 90vh;
+}
+
+.text{
+    position: absolute;
+    top: 40px;
+}
+
+.text, p{
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text :nth-child(2){
+    color: var(--backgrond);
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+.coffee{
+    width: 798.78px;
+    height: 506.47px;
+    position: absolute;
+    bottom: -45px;
+}
+
+.coffee > img{
+    object-fit: contain;
+}
