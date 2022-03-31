@@ -18,6 +18,7 @@ body{
     height: 100vh;
     background: url("./assets/blur-1.png") no-repeat -400px, url("./assets/blur-2.png") no-repeat 400px -700px var(--backgrond);
     background-size: cover;
+    overflow: hidden;
 }
 
 header{
@@ -55,13 +56,13 @@ li:hover::before{
     position: absolute;
     left: -8px;
     top: 1px;
-    width: 5px;
+    width: 3px;
     height: 20px;
     background-color: lawngreen;
-    border-radius: 2px 0 0 2px;
+    border-radius: 1px 0 0 1px;
 }
 
-.getCoffee{
+.bttnPanel{
     border: 1px solid var(--button);
     height: 37px;
     width: 172px;
@@ -69,29 +70,28 @@ li:hover::before{
     padding: 11px 38px;
     line-height: 10px;
     opacity: 1;
-}
-
-.getCoffee > a{
     font-size: 11px;
     font-weight: 700;
+    color: var(--text-color);
+    background-color: transparent;
 }
 
-.getCoffee:hover{
+.bttnPanel:hover{
     background-color: var(--button);
     transition: background .3s;
 }
 
 main{
+    height: 100vh;
+    width: 1024px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    height: 90vh;
+    margin: auto;
+    z-index: 1;
 }
 
 .text{
-    position: absolute;
-    top: 40px;
+    margin-top: 40px;
 }
 
 .text, p{
@@ -110,9 +110,71 @@ main{
     width: 798.78px;
     height: 506.47px;
     position: absolute;
-    bottom: -45px;
+    bottom: -50px;
 }
 
 .coffee > img{
     object-fit: contain;
+}
+
+.uCoffee{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.uCoffee-open{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(41, 41, 46, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+}
+
+.uCoffee-open .container{
+    width: 900px;
+    height: 600px;
+    border: 2px solid var(--button);
+    background-color: rgb(44, 44, 44);
+    border-radius: 2%;
+    transition: background 2s;
+}
+
+.uCoffee-open .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.uCoffee-open .textBox{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.uCoffee-open .open button{
+    width: 280px;
+    height: 50px;
+    background-color: .8257E5;
+    border: var(--border);
+    border-radius: 15px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.uCoffee-open .open button:hover{
+    background-color: #6229e7;
+    transition: background .3s;
 }
